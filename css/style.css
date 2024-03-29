@@ -372,6 +372,28 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         6.  Skills
 --------------------------------------*/
 
+.tech-skills-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.tech-skills-item{
+    margin-left: 25px;
+  
+}
+.tech-skills-item::before{
+    content: "1";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2rem;
+    background-color:#9f00ff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    /* color:#9f00ff; */
+}
+
 .skill-content{padding: 50px 0 80px;}
 .single-skill-content{padding-top: 100px;}
 .section-heading h2 {
