@@ -108,15 +108,22 @@ nav.navbar.bootsnav {
 
 .navbar-brand{
     position: absolute;
-    top:-14px;
-    left:30px;
+    top:0px;
+    right:10px;
+    width: 300px;
+    height: 80px;
+    color: #d92cf9;
+    background-color: transparent;
     
 }
-.navbar-brand svg{
-    color: #d92cf9;
-    width: 100px;
-    height: 100px;
+@media (min-width: 1024px){
+    .navbar-brand{
+    top:2px;
+    left:5px;
+    width: 320px;
+    height: 80px;}
 }
+
 /*.navbar-brand*/
 
 /*.nav li*/
