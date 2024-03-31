@@ -379,27 +379,45 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         6.  Skills
 --------------------------------------*/
 
+.tech-skills-list-wrapper{
+display: flex;
+}
 .tech-skills-list{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 30px;
 }
 .tech-skills-item{
-    margin-left: 25px;
+    margin-left: 30px;
+  
+}
+.tech-skills-item-text{
+    font-size: 18px;
+    margin-right: 3px;
   
 }
 .tech-skills-item::before{
-    content: "1";
-    width: 1rem;
-    height: 1rem;
-    border-radius: 2rem;
+    margin-right: 5px;
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
     background-color:#9f00ff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    /* color:#9f00ff; */
+    color: transparent;
 }
+/* .tech-skills-item::after{
+    content: "";
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:#9f00ff;
+} */
 
 .skill-content{padding: 50px 0 80px;}
 .single-skill-content{padding-top: 100px;}
