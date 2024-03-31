@@ -370,7 +370,7 @@ span.single-timeline-horizontal {
     height:  1px;
     width: 380px;
 }
-span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
+/* span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;} */
 /*.timeline-horizontal-border*/
 
 /*.education-horizontal-timeline*/
@@ -381,6 +381,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .tech-skills-list-wrapper{
 display: flex;
+flex-direction: column;
+}
+
+@media (min-width: 1024px){
+    .tech-skills-list-wrapper{
+        flex-direction: row;}
 }
 .tech-skills-list{
     display: flex;
@@ -582,6 +588,7 @@ display: flex;
     position: relative;
     height: 150px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-left: 1px solid #b2c1ce;
@@ -605,8 +612,10 @@ display: flex;
 .profile-border {
     border-bottom: 1px solid #b2c1ce;
 }
+
 .single-profile-overlay{
     display:flex;
+    flex-direction: column;
     align-items:center;
     text-transform: capitalize;
     justify-content:center;
@@ -640,7 +649,7 @@ display: flex;
     transform:scale(1);
     top:0;
 }
-.single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
+.single-profile:hover .profile-icon-name,.single-profile:hover  a>i{color: #fff;}
 .single-profile:hover .profile-border {border:transparent;}
 /*-------------------------------------
         9. Portfolio
