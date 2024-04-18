@@ -247,7 +247,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 .about-content {padding-top: 100px;}
 .about-info-wrapper{
     float: left;
-    width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+@media screen and (min-width: 1200px) {
+    .about-info-wrapper{
+        width: 60%;
+}
 }
 /*.single-about-txt*/
 .single-about-txt h3 {
@@ -347,6 +354,15 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 
 /*.education-horizontal-timeline*/
 .education-horizontal-timeline .col-sm-4 {padding:0 2px;}
+@media screen and (min-width: 1200px) {
+    .education .education-horizontal-timeline .col-sm-4 {
+      max-width: 280px;
+margin-right: 5px;
+    }
+    .education .education-horizontal-timeline h3 {
+        height: 20px;
+    }
+  }
 
 .single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
 .single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
@@ -671,6 +687,9 @@ flex-direction: column;
     position:relative;
     overflow:hidden;
     margin-bottom: 30px;
+    height: 250px;
+    border: 1px solid rgba(31,44,108,.15);
+box-shadow: 1px 1px 3px rgba(31,44,108,.15), 1px 1px 5px rgba(31,44,108,.25);
 }
 /*.item img*/
 .isotope .item img{
