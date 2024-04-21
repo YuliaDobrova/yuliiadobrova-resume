@@ -162,7 +162,7 @@ nav.navbar.bootsnav ul.nav > li > a {
   transition: 0.3s linear;
 }
 nav.navbar.bootsnav ul.nav > li > a {
-  padding: 35px 20px;
+  padding: 35px 15px;
 }
 nav.navbar.bootsnav ul.nav > li > a:hover,
 nav.navbar.bootsnav ul.nav > li > a:focus,
@@ -391,6 +391,115 @@ nav.navbar.bootsnav .navbar-toggle i {
 /*.ab-list-icon */
 
 /*.single-about-img */
+
+/*-------------------------------------
+        6.  Features
+--------------------------------------*/
+
+.features {
+  padding: 0 0 50px;
+}
+.features-content {
+  margin-top: 50px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.features-content {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .features-content {
+    width: 1200px;
+  }
+}
+
+.features-item {
+  text-align: center;
+  height: 150px;
+  width: 150px;
+  padding: 10px 10px;
+  border-radius: 3px;
+  background: rgba(238, 242, 246, 0.25);
+  box-shadow: 0 0px 5px rgba(71, 71, 71, 0.2);
+  margin-bottom: 20px;
+  margin-right: 20px;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+@media screen and (min-width: 1200px) {
+  .features-item {
+    height: 175px;
+    width: 175px;
+    padding: 20px 10px;
+    margin-right: 20px;
+  }
+}
+
+.features-item-icon {
+  display: inline-block;
+  color: #50616c;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: rgba(238, 242, 246, 0.5);
+  border-radius: 50%;
+}
+
+.features-item h2 {
+  font-size: 16px;
+  margin: 15px 0 15px;
+}
+@media screen and (min-width: 1200px) {
+  .features-item h2 {
+    margin: 35px 0 20px;
+  }
+}
+.features-item h2 {
+  font-size: 14px;
+}
+.features-item p {
+  margin-bottom: 25px;
+  font-size: 13px;
+  line-height: normal;
+  text-transform: initial;
+}
+
+.features-item-icon [class^="flaticon-"]:before,
+.features-item-icon [class*=" flaticon-"]:before,
+.features-item-icon [class^="flaticon-"]:after,
+.features-item-icon [class*=" flaticon-"]:after {
+  font-size: 30px;
+}
+.features-item:hover .features-item-icon [class^="flaticon-"]:before,
+.features-item:hover .features-item-icon [class*=" flaticon-"]:before,
+.features-item:hover .features-item-icon [class^="flaticon-"]:after,
+.features-item:hover .features-item-icon [class*=" flaticon-"]:after {
+  color: rgba(217, 44, 249, 0.5);
+}
+
+.features-item:hover h2,
+.features-item:hover p {
+  color: #fff;
+}
+.features-item:hover .features-item-icon {
+  background: #fff;
+}
+.features-item:hover .welcome-hero-btn.how-work-btn {
+  background: #fff;
+  color: rgba(217, 44, 249, 0.5);
+}
+.features-item:hover {
+  box-shadow: 0 0px 10px rgba(71, 71, 71, 0.4);
+  background: rgba(217, 44, 249, 0.5);
+}
 
 /*-------------------------------------
         5.  Education
@@ -824,6 +933,12 @@ span.single-timeline-horizontal {
   font-size: 14px;
   text-align: center;
 }
+
+.isotope .item:hover .isotope-overlay:hover a:hover {
+  color: #d92cf9;
+  text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 2px 2px 5px #fff,
+    -2px -2px 5px #fff;
+}
 .isotope .item:hover .isotope-overlay {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -1140,9 +1255,10 @@ span.single-timeline-horizontal {
     display: flex;
     flex-direction: row;
     padding: 20px;
+    min-width: 1000px;
   }
   .certificate {
-    width: 400px;
+    width: 450px;
     margin-left: 10px;
     margin-right: 10px;
   }
