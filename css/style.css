@@ -130,24 +130,6 @@ nav.navbar.bootsnav {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-brand {
-  position: absolute;
-  top: 0px;
-  right: 10px;
-  width: 300px;
-  height: 80px;
-  color: #d92cf9;
-  background-color: transparent;
-}
-@media (min-width: 1024px) {
-  .navbar-brand {
-    top: 2px;
-    left: 5px;
-    width: 320px;
-    height: 80px;
-  }
-}
-
 /*.navbar-brand*/
 
 /*.nav li*/
@@ -215,6 +197,66 @@ nav.navbar.bootsnav .navbar-toggle i {
   color: #d92cf9;
 }
 /*.navbar-toggle */
+
+@media screen and (max-width: 1008px) {
+  nav.navbar.bootsnav ul.nav > li.dropdown span.megamenu-title {
+    display: block;
+    color: #43465d;
+    font-size: 18px;
+  }
+  nav.navbar.bootsnav
+    ul.dropdown-menu.megamenu-content
+    .content
+    ul.menu-col
+    li
+    .megamenu-sub-title
+    a {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  nav.navbar.bootsnav
+    ul.dropdown-menu.megamenu-content
+    .content
+    ul.menu-col
+    li
+    .megamenu-sub-txt
+    a {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  nav.navbar.bootsnav ul.nav > li > a {
+    padding: 35px 8px;
+  }
+
+  .welcome-hero {
+    height: 768px;
+  }
+
+  .timeline-content span > i,
+  .experience-time span > i {
+    left: -15.5%;
+  }
+}
+
+.navbar-brand {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 300px;
+  height: 80px;
+  color: #d92cf9;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .navbar-brand {
+    top: 2px;
+    left: 5px;
+    width: 320px;
+    height: 80px;
+  }
+}
 
 /*-------------------------------------
         3.  Welcome-hero
@@ -336,6 +378,13 @@ nav.navbar.bootsnav .navbar-toggle i {
   margin-left: 10px;
   margin-right: 10px;
 }
+@media screen and (min-width: 768px) {
+  .single-about-img-wrapper {
+    margin-left: 50px;
+    margin-right: 0px;
+  }
+}
+
 .single-about-img {
   position: relative;
   box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
@@ -353,6 +402,51 @@ nav.navbar.bootsnav .navbar-toggle i {
   width: 350px;
   height: 460px;
 }
+
+@media screen and (max-width: 1440px) {
+  .single-about-img img {
+    max-width: 100%;
+  }
+  .single-about-img:before,
+  .about-list-icon {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .single-about-img {
+    max-width: 450px;
+  }
+  .experience-time span > i,
+  .timeline-content span > i,
+  .main-timeline:before {
+    display: none;
+  }
+  .experience-time,
+  .timeline-content {
+    margin-left: 0;
+  }
+
+  .isotope .item {
+    max-width: 350px;
+    margin: 0 auto 30px;
+  }
+
+  .single-profile {
+    max-width: 350px;
+    margin: 10px auto;
+    border: 0;
+  }
+  .profile-border {
+    border: 0;
+  }
+
+  .single-horizontal-timeline {
+    max-width: 350px;
+    margin: 30px auto;
+  }
+}
+
 .about-list-icon {
   display: flex;
   justify-content: center;
@@ -768,6 +862,38 @@ span.single-timeline-horizontal {
 .experience-time-responsive {
   display: none;
 }
+
+@media screen and (max-width: 991px) {
+  .experience-time-responsive {
+    display: block;
+  }
+  .experience-time-main {
+    display: none;
+  }
+  .experience-time,
+  .timeline-content {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+  .timeline-content span > i {
+    left: 0%;
+    top: -54%;
+  }
+  .experience-time span > i {
+    left: -6%;
+    top: 6%;
+  }
+  .main-timeline:before {
+    left: 0.4%;
+  }
+
+  .single-horizontal-timeline .experience-time,
+  .single-horizontal-timeline .timeline-content {
+    margin: 0;
+  }
+}
+
 /*-------------------------------------
         8. Profiles
 --------------------------------------*/
@@ -789,7 +915,9 @@ span.single-timeline-horizontal {
 }
 .single-profile {
   position: relative;
-  height: 150px;
+  height: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -802,6 +930,15 @@ span.single-timeline-horizontal {
   -o-transition: background 0.5s linear;
   transition: background 0.5s linear;
 }
+
+@media screen and (min-width: 1200px) {
+  .single-profile {
+    height: 150px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
 .single-profile:last-child {
   border-right: 1px solid #b2c1ce;
 }
@@ -1198,7 +1335,7 @@ span.single-timeline-horizontal {
 #modal {
   background-color: rgba(255, 255, 255, 0.65);
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
@@ -1243,6 +1380,7 @@ span.single-timeline-horizontal {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  min-width: 300px;
 }
 
 .certificate {
@@ -1255,11 +1393,18 @@ span.single-timeline-horizontal {
     display: flex;
     flex-direction: row;
     padding: 20px;
-    min-width: 1000px;
+    min-width: 1100px;
   }
   .certificate {
-    width: 450px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 500px;
+    height: 600px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .subscribe-title h2 {
+    font-size: 24px;
   }
 }
