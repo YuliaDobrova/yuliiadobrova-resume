@@ -1,18 +1,13 @@
 $(document).ready(function () {
   "use strict";
-
-  /*==================================
-* Author        : "ThemeSine"
-* Template Name : Khanas HTML Template
-* Version       : 1.0
-==================================== */
-
   /*=========== TABLE OF CONTENTS ===========
 1. Scroll To Top 
 2. Smooth Scroll spy
 3. Progress-bar
-4. owl carousel
-5. welcome animation support
+4. Slick carousel
+5. Welcome animation support
+6. Modal
+7. Counter
 ======================================*/
 
   // 1. Scroll To Top
@@ -78,41 +73,43 @@ $(document).ready(function () {
     });
   }
 
-  // 4. owl carousel
+  // 4. slick carousel
 
-  // i. client (carousel)
-
-  $("#client").owlCarousel({
-    items: 7,
-    loop: true,
-    smartSpeed: 1000,
+  $(".testimonial-carousel").slick({
+    infinite: true,
+    centerMode: true,
     autoplay: true,
-    dots: false,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 2,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+    autoplaySpeed: 3000,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+        },
       },
-      415: {
-        items: 2,
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
       },
-      600: {
-        items: 4,
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+        },
       },
-      1199: {
-        items: 4,
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
       },
-      1200: {
-        items: 7,
-      },
-    },
-  });
-
-  $(".play").on("click", function () {
-    owl.trigger("play.owl.autoplay", [1000]);
-  });
-  $(".stop").on("click", function () {
-    owl.trigger("stop.owl.autoplay");
+    ],
   });
 
   // 5. welcome animation support
@@ -152,12 +149,11 @@ $(document).ready(function () {
     }
   });
 
-  var scroller = {
-    target: document.querySelector("#scroll-container"),
-    ease: 0.05, // <= scroll speed
-    endY: 0,
-    y: 0,
-    resizeRequest: 1,
-    scrollRequest: 0,
-  };
+  // 7. Counter
+  $(window).on("load", function () {
+    $(".counter").counterUp({
+      delay: 10,
+      time: 3000,
+    });
+  });
 });
