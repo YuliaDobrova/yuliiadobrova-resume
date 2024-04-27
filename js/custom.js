@@ -8,6 +8,7 @@ $(document).ready(function () {
 5. Welcome animation support
 6. Modal
 7. Counter
+8. Form submition
 ======================================*/
 
   // 1. Scroll To Top
@@ -155,5 +156,26 @@ $(document).ready(function () {
       delay: 10,
       time: 3000,
     });
+  });
+
+  // 8. Form submition
+
+  const contactForm = document.getElementById("contactForm");
+
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const response = await fetch(process.env.FABFORM_ENDPOINT, {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      alert("Form submitted successfully!");
+      contactForm.reset();
+    } else {
+      alert("Error submitting the form. Please try again later.");
+    }
   });
 });
