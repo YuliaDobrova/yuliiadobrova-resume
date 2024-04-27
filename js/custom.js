@@ -164,13 +164,14 @@ $(document).ready(function () {
 
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-
+    // console.log("process.env.FABFORM_ENDPOINT", process.env.FABFORM_ENDPOINT);
     const formData = new FormData(contactForm);
-    const response = await fetch(process.env.FABFORM_ENDPOINT, {
+    const response = await fetch("https://fabform.io/f/A9mhFz7", {
       method: "POST",
       body: formData,
     });
 
+    // console.log("process.env.FABFORM_ENDPOINT", process.env.FABFORM_ENDPOINT);
     if (response.ok) {
       alert("Form submitted successfully!");
       contactForm.reset();
