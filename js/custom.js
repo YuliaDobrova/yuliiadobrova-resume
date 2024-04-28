@@ -132,24 +132,58 @@ $(document).ready(function () {
   });
 
   // 6. Modal
-  let openBtn = document.getElementById("open-btn");
-  let modalBackground = document.getElementById("modal-background");
-  let closeBtn = document.getElementById("close-btn");
 
-  openBtn.addEventListener("click", function () {
-    modalBackground.style.display = "block";
+  // let openBtn = document.getElementById("open-btn");
+  const images = document.querySelectorAll(".certificates-content img");
+  let imgSrc;
+  images.forEach((img) => {
+    img.addEventListener("click", (e) => {
+      imgSrc = e.target.src;
+      console.log(imgSrc);
+      imgModal(imgSrc);
+    });
   });
 
-  closeBtn.addEventListener("click", function () {
-    modalBackground.style.display = "none";
-  });
+  // let modalBackground = document.getElementById("modal-background");
 
-  window.addEventListener("click", function (event) {
-    if (event.target === modalBackground) {
-      modalBackground.style.display = "none";
+  function imgModal(imgSrc) {
+    const main = document.querySelector(".main");
+    const modal = document.createElement("div");
+    modal.setAttribute("class", "modal");
+    main.append(modal);
+
+    const newImage = document.createElement("img");
+    newImage.setAttribute("src", imgSrc);
+    newImage.setAttribute("id", "imgId");
+    modal.append(newImage);
+
+    const closeBtn = document.createElement("span");
+    closeBtn.setAttribute("class", "close-btn");
+    modal.append(newImage, closeBtn);
+
+    function onModalClose() {
+      newImage.removeAttribute("src", imgSrc);
+      modal.removeChild(newImage);
+      modal.removeChild(closeBtn);
+      modal.remove();
     }
-  });
 
+    closeBtn.addEventListener("click", function () {
+      onModalClose();
+    });
+
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        onModalClose();
+      }
+    });
+
+    window.addEventListener("keydown", function (event) {
+      if (event.code === "Escape") {
+        onModalClose();
+      }
+    });
+  }
   // 7. Counter
   $(window).on("load", function () {
     $(".counter").counterUp({
