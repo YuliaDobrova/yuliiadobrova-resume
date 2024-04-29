@@ -132,8 +132,6 @@ $(document).ready(function () {
   });
 
   // 6. Modal
-
-  // let openBtn = document.getElementById("open-btn");
   const images = document.querySelectorAll(".certificates-content img");
   let imgSrc;
   images.forEach((img) => {
@@ -143,8 +141,6 @@ $(document).ready(function () {
       imgModal(imgSrc);
     });
   });
-
-  // let modalBackground = document.getElementById("modal-background");
 
   function imgModal(imgSrc) {
     const main = document.querySelector(".main");
@@ -184,6 +180,7 @@ $(document).ready(function () {
       }
     });
   }
+
   // 7. Counter
   $(window).on("load", function () {
     $(".counter").counterUp({
@@ -198,14 +195,11 @@ $(document).ready(function () {
 
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    // console.log("process.env.FABFORM_ENDPOINT", process.env.FABFORM_ENDPOINT);
     const formData = new FormData(contactForm);
     const response = await fetch("https://fabform.io/f/A9mhFz7", {
       method: "POST",
       body: formData,
     });
-
-    // console.log("process.env.FABFORM_ENDPOINT", process.env.FABFORM_ENDPOINT);
     if (response.ok) {
       alert("Form submitted successfully!");
       contactForm.reset();

@@ -825,11 +825,19 @@ span.single-timeline-horizontal {
   justify-content: center;
   align-items: center;
   /* width: 100%; */
-  padding: 5px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  padding: 3px;
+  margin-left: 7px;
+  margin-bottom: 7px;
   border: solid 1px #b2c1ce;
   border-radius: 5px;
+}
+
+@media (min-width: 1024px) {
+  .tech-skills-item {
+    padding: 5px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
 }
 .tech-skills-item:hover,
 .tech-skills-item:focus {
