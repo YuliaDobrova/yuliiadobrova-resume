@@ -1,1 +1,3 @@
-# yuliiadobrova-resume
+# YULIIA DOBROVA
+
+## Full-Stack Software Developer 👩🏻‍💻
