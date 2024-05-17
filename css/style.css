@@ -125,12 +125,10 @@ nav.navbar.bootsnav.no-background {
 }
 
 nav.navbar.bootsnav {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
   border-bottom: transparent;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
 }
-
-/*.navbar-brand*/
 
 /*.nav li*/
 nav.navbar.bootsnav ul.nav > li > a {
@@ -252,7 +250,33 @@ nav.navbar.bootsnav .navbar-toggle i {
   height: 80px;
   color: #d92cf9;
   background-color: transparent;
+  /* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(217, 44, 249, 0.75)); */
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(217, 44, 249, 1));
+  animation-name: changeColor;
+  animation-duration: 3000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+.navbar-brand:hover {
+  animation-play-state: paused;
+}
+
+@keyframes changeColor {
+  0% {
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(255, 255, 255, 0.75));
+  }
+
+  50% {
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(217, 44, 249, 0.75));
+  }
+
+  100% {
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(255, 255, 255, 0.75));
+  }
+}
+/* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(217, 44, 249, 0.5)); */
+/* } */
 @media (min-width: 1024px) {
   .navbar-brand {
     top: 2px;
@@ -273,7 +297,8 @@ nav.navbar.bootsnav .navbar-toggle i {
   background: url(../images/about/welcome-banner.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 890px;
+  /* height: 890px; */
+  height: 1000px;
 }
 .welcome-hero:before {
   position: absolute;
@@ -430,7 +455,7 @@ nav.navbar.bootsnav .navbar-toggle i {
   filter: contrast(1.1);
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1200px) {
   .single-about-img img {
     max-width: 100%;
   }
