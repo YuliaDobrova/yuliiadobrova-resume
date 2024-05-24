@@ -246,7 +246,7 @@ nav.navbar.bootsnav .navbar-toggle i {
   position: absolute;
   top: 0px;
   right: 10px;
-  width: 300px;
+  width: 270px;
   height: 80px;
   color: #d92cf9;
   background-color: transparent;
@@ -281,7 +281,7 @@ nav.navbar.bootsnav .navbar-toggle i {
   .navbar-brand {
     top: 2px;
     left: 5px;
-    width: 320px;
+    width: 285px;
     height: 80px;
   }
 }
