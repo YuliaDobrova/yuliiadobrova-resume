@@ -381,18 +381,20 @@ nav.navbar.bootsnav .navbar-toggle i {
 }
 .single-about-txt h3 {
   font-size: 18px;
-  color: #3c4258;
+  /* color: #3c4258; */
+  color: #999fb3;
   text-transform: initial;
   line-height: 1.5;
 }
 .single-about-txt p {
   font-size: 16px;
   line-height: 1.5;
+  /* color: #3c4258; */
   color: #999fb3;
   padding: 5px 0 0px;
 }
 .single-about-txt p span {
-  font-weight: 500;
+  font-weight: 600;
 }
 .single-about-info {
   color: #999fb3;
@@ -497,8 +499,8 @@ nav.navbar.bootsnav .navbar-toggle i {
   bottom: 0;
   left: 0;
   width: 109%;
-  height: 90px;
-  background: #1f2c6c;
+  height: 60px;
+  background: #999fb3;
 }
 .about-list-icon ul {
   display: flex;
@@ -511,17 +513,26 @@ nav.navbar.bootsnav .navbar-toggle i {
 .about-list-icon ul li a {
   cursor: pointer;
   color: #fff;
-  display: inline-block;
-  border: 2px solid;
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
   margin-left: 20px;
   border-radius: 8px;
-  width: 30px;
-  height: 30px;
+  /* border-radius: 50%; */
+  width: 40px;
+  height: 40px;
   line-height: 28px;
   text-align: center;
 }
+.about-list-icon ul li a:hover {
+  color: #b636ff;
+  border: 2px solid #b636ff;
+}
+
 .about-list-icon ul li a i {
-  margin-left: 6px;
+  margin-left: 22px;
 }
 
 .flaticon-github-logo::before {
@@ -678,7 +689,7 @@ nav.navbar.bootsnav .navbar-toggle i {
 }
 @media screen and (min-width: 1200px) {
   .education .education-horizontal-timeline .col-sm-4 {
-    max-width: 280px;
+    max-width: 225px;
     margin-right: 5px;
   }
   .education .education-horizontal-timeline h3 {
@@ -1390,8 +1401,8 @@ span.single-timeline-horizontal {
   margin-top: 6px;
 }
 .contact-img {
-  width: 60px;
-  height: 60px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-left: 15px;
 }
@@ -1414,7 +1425,6 @@ span.single-timeline-horizontal {
   margin-bottom: 26px;
 }
 
-/*.contact-add-info */
 .my-app-link {
   color: #b636ff;
 }
@@ -1444,7 +1454,7 @@ span.single-timeline-horizontal {
 .hm-foot-icon ul li > a:hover {
   color: #fff;
   background: #b636ff;
-} /*hm-foot-icon*/
+}
 
 /*==============================
         14. Footer
