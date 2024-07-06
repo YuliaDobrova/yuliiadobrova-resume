@@ -3,14 +3,14 @@
 2.  Header
 3.  Welcome-hero
 4.  About
-5.  Experience
-6.  Education
-7.  Certificates
-8.  Skills
-9.  Features
-10. Portfolio
-11. Recommendations
-12. Statistics
+5. Statistics
+6.  Experience
+7.  Education
+8.  Certificates
+9.  Skills
+10.  Features
+11. Portfolio
+12. Recommendations
 13. Contact
 14. Footer
 15. Scroll to top
@@ -540,7 +540,49 @@ nav.navbar.bootsnav .navbar-toggle i {
 }
 
 /*-------------------------------------
-        5. Experience
+        5.  Statistics
+--------------------------------------*/
+
+.statistics {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: url(../images/counter/counter-banner-img.png) no-repeat fixed;
+  background-position: center;
+  background-size: cover;
+  padding: 130px 0 120px;
+}
+.statistics:before {
+  position: absolute;
+  content: "";
+  background: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.single-ststistics-box {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.statistics-content {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 60px;
+}
+.statistics-content span {
+  margin-left: 5px;
+}
+.single-ststistics-box h3 {
+  color: #fff;
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/*-------------------------------------
+        6. Experience
 -------------------------------------*/
 .experience {
   margin-top: 50px;
@@ -666,7 +708,7 @@ nav.navbar.bootsnav .navbar-toggle i {
 }
 
 /*-------------------------------------
-        6.  Education
+        7.  Education
 --------------------------------------*/
 
 .education {
@@ -729,7 +771,7 @@ span.single-timeline-horizontal {
 }
 
 /*-------------------------------------
-        7.  Certificates
+        8.  Certificates
 --------------------------------------*/
 
 .certificates {
@@ -784,7 +826,7 @@ span.single-timeline-horizontal {
 }
 
 /*-------------------------------------
-        8.  Skills
+        9.  Skills
 --------------------------------------*/
 
 .tech-skills-list-wrapper {
@@ -912,7 +954,7 @@ span.single-timeline-horizontal {
 }
 
 /*-------------------------------------
-        9.  Features
+        10.  Features
 --------------------------------------*/
 
 .features {
@@ -1058,7 +1100,7 @@ span.single-timeline-horizontal {
 }
 
 /*-------------------------------------
-        10. Portfolio
+        11. Portfolio
 --------------------------------------*/
 
 .portfolio {
@@ -1150,7 +1192,7 @@ span.single-timeline-horizontal {
 }
 
 /*-------------------------------------
-        11. Recommendations
+        12. Recommendations
 --------------------------------------*/
 
 .recommendations {
@@ -1266,48 +1308,6 @@ span.single-timeline-horizontal {
   opacity: 1;
 }
 /*.slick-slide*/
-
-/*-------------------------------------
-        12.  Statistics
---------------------------------------*/
-
-.statistics {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background: url(../images/counter/counter-banner-img.png) no-repeat fixed;
-  background-position: center;
-  background-size: cover;
-  padding: 130px 0 120px;
-}
-.statistics:before {
-  position: absolute;
-  content: "";
-  background: rgba(255, 255, 255, 0.15);
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-.single-ststistics-box {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.statistics-content {
-  display: flex;
-  justify-content: center;
-  color: #fff;
-  font-size: 60px;
-}
-.statistics-content span {
-  margin-left: 5px;
-}
-.single-ststistics-box h3 {
-  color: #fff;
-  font-size: 24px;
-  text-transform: capitalize;
-  font-weight: 500;
-}
 
 /*-------------------------------------
         13. Contact
