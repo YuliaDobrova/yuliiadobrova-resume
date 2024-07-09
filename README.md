@@ -1,3 +1,5 @@
 # YULIIA DOBROVA
 
-## Full-Stack Software Developer 👩🏻‍💻
+## Software Engineer
+
+## Front-end Developer 👩🏻‍💻
