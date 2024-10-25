@@ -279,10 +279,10 @@ nav.navbar.bootsnav .navbar-toggle i {
 
 @media (min-width: 1024px) {
   .navbar-brand {
-    top: -8px;
+    top: 2px;
     left: 5px;
-    width: 320px;
-    height: 100px;
+    width: 300px;
+    height: 80px;
   }
 }
 
